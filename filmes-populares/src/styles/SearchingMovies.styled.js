@@ -16,6 +16,12 @@ export const ContainerSearchingList = styled.div`
     flex-direction: row;
     justify-content: center;
     align-content: center;
+
+    @media (max-width: 500px) {
+      .containerPagination {
+        width: 300px;
+      }
+    }
   }
 `
 

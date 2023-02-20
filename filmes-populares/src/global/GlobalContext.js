@@ -19,9 +19,7 @@ export default function GlobalProvider({ children }) {
         `${BASE_URL}/movie/popular${KEY}&page=${page}`
       )
       setMovies(res.data.results)
-    } catch (error) {
-      // console.log('ERRO', error.response)
-    }
+    } catch (error) {}
   }
 
   const getPage = (event, value) => {
@@ -39,9 +37,7 @@ export default function GlobalProvider({ children }) {
       )
       setCountsSerachPage(res.data.total_pages)
       setSearchList(res.data.results)
-    } catch (error) {
-      // console.log('ERRO', error.response)
-    }
+    } catch (error) {}
   }
 
   const getSearchPage = (event, value) => {
