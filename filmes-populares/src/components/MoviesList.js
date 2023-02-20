@@ -17,7 +17,10 @@ export default function MoviesList() {
           return (
             <CardMovie
               key={movie.id}
-              onClick={() => goDetailPage(navigate, movie.id)}
+              onClick={() => {
+                goDetailPage(navigate, movie.id)
+                window.scrollTo(0, 0)
+              }}
             >
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

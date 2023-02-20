@@ -25,4 +25,22 @@ export const HeaderStyled = styled.div`
       border: 1px solid black;
     }
   }
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 124px;
+
+    .logo {
+      margin: 0;
+    }
+
+    .input {
+      margin: 0;
+      width: 40%;
+      margin-top: 10px;
+    }
+  }
 `

@@ -17,6 +17,12 @@ export const ContainerList = styled.div`
     justify-content: center;
     align-content: center;
   }
+
+  @media (max-width: 500px) {
+    .containerPagination {
+      width: 300px;
+    }
+  }
 `
 
 export const CardMovie = styled.div`

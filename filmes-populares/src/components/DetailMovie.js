@@ -226,22 +226,25 @@ export default function DetailMovie() {
             })
             .map(trailer => {
               return (
-                <div className={'player'}>
+                <div className={'player'} key={trailer.id}>
                   <ReactPlayer
+                    className={'reactPlayer'}
                     key={'youtube'}
                     url={`https://www.youtube.com/watch?v=${trailer?.key}`}
-                    width="600px"
-                    height="400px"
+                    width="26rem"
+                    height="18rem"
                   />
                 </div>
               )
             })}
         </div>
 
+        <h2 className={'recomendations'}>Recomendações</h2>
         <div className={'ContainerRecomendatios'}>
           {recomendations.map(movie => {
             return (
               <div
+                key={movie.id}
                 className={'cardRecomendation'}
                 onClick={() => {
                   goDetailPage(navigate, movie.id)
@@ -251,7 +254,6 @@ export default function DetailMovie() {
               >
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  key={movie.id}
                   alt={movie.title}
                   className={'backdropRecomedations'}
                 />
