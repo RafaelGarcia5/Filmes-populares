@@ -8,7 +8,7 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path={'/'} element={<HomePage />} />
-        <Route path={'/datails'} element={<DetailPage />} />
+        <Route path={'/datails/:id'} element={<DetailPage />} />
         <Route path={'*'} element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>

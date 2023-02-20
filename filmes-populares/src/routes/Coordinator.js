@@ -1,7 +1,7 @@
-const goToHomePage = navigate => {
+export const goToHomePage = navigate => {
   navigate('/')
 }
 
-const goDetailPage = navigate => {
-  navigate('/datails')
+export const goDetailPage = (navigate, id) => {
+  navigate(`/datails/${id}`)
 }
