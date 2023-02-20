@@ -10,6 +10,7 @@ export const HeaderStyled = styled.div`
     margin-top: 16px;
     width: 254px;
     height: 46px;
+    cursor: pointer;
   }
 
   .input {

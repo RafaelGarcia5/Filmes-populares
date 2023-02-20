@@ -7,6 +7,16 @@ export const ContainerList = styled.div`
   align-items: center;
   margin: auto 3em;
   padding: 2em;
+
+  .containerPagination {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
 `
 
 export const CardMovie = styled.div`
@@ -43,18 +53,18 @@ export const CardMovie = styled.div`
 
   .titleMovie {
     font-family: 'Roboto';
-    font-style: bold;
+    font-style: Bold;
     color: #000000;
     margin: 3px;
     margin-left: 7px;
   }
 
   .realeseDate {
-    font-family: 'Roboto';
-    font-style: bold;
     color: #646464;
     margin: 3px;
     margin-bottom: 5px;
     margin-left: 7px;
+    font-family: 'Roboto';
+    font-style: Bold;
   }
 `

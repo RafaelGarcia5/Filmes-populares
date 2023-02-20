@@ -7,6 +7,16 @@ export const ContainerSearchingList = styled.div`
   align-items: center;
   margin: auto 3em;
   padding: 2em;
+
+  .containerPagination {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
 `
 
 export const CardMovie = styled.div`

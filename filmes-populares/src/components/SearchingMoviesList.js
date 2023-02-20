@@ -5,39 +5,43 @@ import {
   ContainerSearchingList
 } from '../styles/SearchingMovies.styled'
 import { Pagination } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import { goDetailPage } from '../routes/Coordinator'
 
 export default function SearchingMoviesList() {
   const context = useContext(GlobalContext)
-  const {
-    searchList,
-    getSearchPage,
-    setSearchPage,
-    searchPage,
-    countSearchPage
-  } = context
+  const { searchList, getSearchPage, searchPage, countSearchPage, setQuery } =
+    context
+  const navigate = useNavigate()
 
   return (
     <div>
       <ContainerSearchingList>
         {searchList.map(movie => {
           return (
-            <CardMovie key={movie.id}>
+            <CardMovie
+              key={movie.id}
+              onClick={() => {
+                goDetailPage(navigate, movie.id)
+                setQuery('')
+              }}
+            >
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 key={movie.id}
                 alt={movie.title}
                 className={'backdrop'}
               />
-              <p alt={'title'} className={'titleMovie'}>
+              <h4 alt={'title'} className={'titleMovie'}>
                 {movie?.title}
-              </p>
-              <p alt={'realeseDate'} className={'realeseDate'}>
+              </h4>
+              <h4 alt={'realeseDate'} className={'realeseDate'}>
                 {movie.release_date.split('-').reverse().join('/')}
-              </p>
+              </h4>
             </CardMovie>
           )
         })}
-        <div>
+        <div className={'containerPagination'}>
           <Pagination
             count={countSearchPage}
             color={'primary'}
