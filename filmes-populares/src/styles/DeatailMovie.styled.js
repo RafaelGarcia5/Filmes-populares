@@ -210,7 +210,7 @@ export const ContainerDetails = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 1200px;
+      height: 1320px;
 
       .poster {
         margin: 10px;
