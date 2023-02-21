@@ -161,6 +161,11 @@ export const ContainerDetails = styled.div`
     margin-bottom: 0;
   }
 
+  .recomendations {
+    margin-bottom: 0;
+    margin-left: 90px;
+  }
+
   .ContainerRecomendatios {
     display: flex;
     flex-direction: row;

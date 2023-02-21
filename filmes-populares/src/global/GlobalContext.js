@@ -16,7 +16,7 @@ export default function GlobalProvider({ children }) {
   const fetchMovies = async () => {
     try {
       const res = await axios.get(
-        `${BASE_URL}/movie/popular${KEY}&page=${page}`
+        `${BASE_URL}/movie/popular${KEY}&page=${page}&language=pt-BR`
       )
       setMovies(res.data.results)
     } catch (error) {}
@@ -33,7 +33,7 @@ export default function GlobalProvider({ children }) {
   const getWantedMovies = async () => {
     try {
       const res = await axios.get(
-        `${BASE_URL}/search/movie${KEY}&language=en-US&query=${query}`
+        `${BASE_URL}/search/movie${KEY}&language=en-US&query=${query}&language=pt-BR`
       )
       setCountsSerachPage(res.data.total_pages)
       setSearchList(res.data.results)
