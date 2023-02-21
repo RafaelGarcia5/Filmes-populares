@@ -44,9 +44,12 @@ export default function SearchingMoviesList() {
         <div className={'containerPagination'}>
           <Pagination
             count={countSearchPage}
+            size="small"
             color={'primary'}
             alt="pagination selector"
             page={searchPage}
+            siblingCount={0}
+            boundaryCount={1}
             onChange={getSearchPage}
             onClick={window.scrollTo(0, 0)}
           />
