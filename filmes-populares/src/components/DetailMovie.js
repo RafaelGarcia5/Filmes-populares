@@ -19,7 +19,9 @@ export default function DetailMovie() {
 
   const fetchDeatilsMovies = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movie/${id}${KEY}`)
+      const res = await axios.get(
+        `${BASE_URL}/movie/${id}${KEY}&language=pt-BR`
+      )
       setDeatilsMovie(res.data)
     } catch (error) {
       console.log('ERRO', error.response)
@@ -28,7 +30,9 @@ export default function DetailMovie() {
 
   const fetchAge = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movie/${id}/release_dates${KEY}`)
+      const res = await axios.get(
+        `${BASE_URL}/movie/${id}/release_dates${KEY}&language=pt-BR`
+      )
       const data = res.data.results
       for (let obj of data) {
         if (obj.iso_3166_1 === 'BR') {
@@ -40,7 +44,9 @@ export default function DetailMovie() {
 
   const fetchDirection = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movie/${id}/credits${KEY}`)
+      const res = await axios.get(
+        `${BASE_URL}/movie/${id}/credits${KEY}&language=pt-BR`
+      )
       setCast(res.data)
     } catch (error) {
       console.log('ERRO', error.response)
@@ -49,7 +55,9 @@ export default function DetailMovie() {
 
   const fetchTrailer = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movie/${id}/videos${KEY}`)
+      const res = await axios.get(
+        `${BASE_URL}/movie/${id}/videos${KEY}&language=pt-BR`
+      )
       setTraler(res.data.results)
     } catch (error) {
       console.log('ERRO', error.response)
@@ -59,7 +67,7 @@ export default function DetailMovie() {
   const fetchRecometions = async () => {
     try {
       const res = await axios.get(
-        `${BASE_URL}/movie/${id}/recommendations${KEY}`
+        `${BASE_URL}/movie/${id}/recommendations${KEY}&language=pt-BR`
       )
       setRecomendation(res.data.results)
     } catch (error) {
