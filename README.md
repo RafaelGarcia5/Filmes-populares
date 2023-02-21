@@ -9,7 +9,7 @@
 - <a href="https://reactrouter.com/en/main">React-router</a>
 - <a href="https://www.npmjs.com/package/react-circular-progressbar">React-circular-progressbar</a>
 
-# Oque funciona:
+# O que funciona:
 
 - Home
 - Pagina de detalhes
