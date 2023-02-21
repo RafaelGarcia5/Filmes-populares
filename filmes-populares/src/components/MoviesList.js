@@ -41,6 +41,8 @@ export default function MoviesList() {
           <Pagination
             size="small"
             count={500}
+            siblingCount={0}
+            boundaryCount={1}
             color={'primary'}
             alt="pagination selector"
             page={page}

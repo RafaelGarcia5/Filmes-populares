@@ -19,7 +19,9 @@ export const ContainerSearchingList = styled.div`
 
     @media (max-width: 500px) {
       .containerPagination {
-        width: 300px;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
