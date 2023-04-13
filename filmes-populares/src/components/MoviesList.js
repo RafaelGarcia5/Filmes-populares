@@ -32,7 +32,7 @@ export default function MoviesList() {
                 {movie?.title}
               </h4>
               <h4 alt={'realeseDate'} className={'realeseDate'}>
-                {movie.release_date.split('-').reverse().join('/')}
+                {movie.release_date?.split('-').reverse().join('/')}
               </h4>
             </CardMovie>
           )
