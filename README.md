@@ -18,7 +18,7 @@
 
 # :dart: Deploy
 
-- <a href="https://tedious-pigs.surge.sh/">Link</a>
+- <a href="https://talented-plate.surge.sh/">Link</a>
 
 # API
 
